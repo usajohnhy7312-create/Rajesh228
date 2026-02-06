@@ -67,15 +67,14 @@
             border: 3px solid #eab308; 
             max-width: 90%; 
         }
-        /* AAPKA MANGA HUA BADA TEXT STYLE */
         .win-text {
             color: #eab308;
-            font-size: 45px; /* Bahut bada size */
+            font-size: 42px; 
             font-weight: 900;
             margin: 0 0 20px 0;
             text-transform: uppercase;
-            line-height: 1.2;
-            text-shadow: 2px 2px 10px rgba(234, 179, 8, 0.5);
+            line-height: 1.1;
+            text-shadow: 2px 2px 10px rgba(234, 179, 8, 0.6);
         }
         .victory-image { 
             width: 250px; 
@@ -101,7 +100,7 @@
 <body>
 
     <audio id="bg-music" loop>
-        <source src="ReelAudio-4883.mp3" type="audio/mpeg">
+        <source src="Laude_na_bhojan.m4a" type="audio/mp4">
     </audio>
     <audio id="win-sound">
         <source src="Voicemod Soundboard - fahh normal.mp4" type="audio/mp4">
@@ -119,9 +118,7 @@
     <div id="win-modal">
         <div class="modal-content">
             <div class="win-text">Kay chehra bhosdi</div>
-            
             <img src="127828206.jpg" alt="Victory" class="victory-image">
-            
             <p style="font-size: 18px; margin-bottom: 25px; color: #94a3b8;">Impossible Achieved!</p>
             <button id="play-again">Play Again</button>
         </div>
@@ -144,7 +141,6 @@
             attempts++;
             attemptsDisplay.innerText = attempts;
 
-            // 10% Chance to win
             if (Math.random() < 0.10) {
                 handleWin();
                 return;
